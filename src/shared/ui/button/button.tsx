@@ -1,10 +1,26 @@
-import { type ButtonHTMLAttributes } from 'react';
+import { type PropsWithChildren } from 'react';
 
-export const Button = ({...buttonProperties}: ButtonHTMLAttributes<HTMLButtonElement>) => {
+import classNames from 'classnames';
+
+import { ButtonApperance, type ButtonProperties } from './button.type';
+import ButtonStyle from './ButtonStyle.module.scss';
+
+export const Button = ({
+  icon,
+  children,
+  apperance = ButtonApperance.General,
+  ...buttonProperties
+}: PropsWithChildren<ButtonProperties>) => {
   return (
-    <button 
-    {...buttonProperties}
+    <button
+      {...buttonProperties}
+      className={classNames({
+        [ButtonStyle.btn]: true,
+        [ButtonStyle[apperance]]: true
+      })}
     >
-        Click me!!
-    </button>);
+      {icon && <div>{icon}</div>}
+      {children}
+    </button>
+  );
 };
