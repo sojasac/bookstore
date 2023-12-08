@@ -1,0 +1,45 @@
+.menu {
+  width: 30%;
+  position: fixed;
+  z-index: 56;
+  right: -30%;
+  top: 0;
+  background-color: #fff;
+  transition: all 0.2s;
+  height: 100vh;
+}
+
+.active {
+  right: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  border-bottom: 1px solid var(--line-color);
+  > h2 {
+    display: none;
+  }
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  > h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+}

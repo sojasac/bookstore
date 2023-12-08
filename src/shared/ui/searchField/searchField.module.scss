@@ -1,0 +1,11 @@
+.container {
+  width: 50%;
+  position: relative;
+  > button {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 12px);
+    block-size: fit-content;
+    width: fit-content;
+  }
+}

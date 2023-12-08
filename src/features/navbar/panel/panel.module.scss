@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+}
